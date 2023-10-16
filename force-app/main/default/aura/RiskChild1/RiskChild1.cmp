@@ -1,0 +1,10 @@
+<aura:component>
+    <aura:registerEvent name="RiskComponentEvent" type="c:RiskComponentEvent"/>
+    <aura:registerEvent name="RiskApplicationEvent" type="c:RiskApplicationEvent"/>
+    
+    <p>Risk Child 1</p>
+    <p><lightning:button label="Fire component event" onclick="{!c.fireComponentEvent}" /> </p>
+        
+    <lightning:button label="Fire Application event" variant="brand" onclick="{!c.fireApplicationEvent}"/>
+
+</aura:component>

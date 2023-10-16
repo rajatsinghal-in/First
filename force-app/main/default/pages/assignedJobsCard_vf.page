@@ -1,0 +1,14 @@
+<apex:page >
+  <apex:includeLightning />
+  <div id="lightning" />
+  <script>
+    var pageSource = 'Assignedvf';
+    $Lightning.use("c:JobsCard_LightningApp", function() {        
+        $Lightning.createComponent("c:JobsCard_Lightning",
+                                   {"pageSource" : pageSource},
+                                   "lightning",
+                                   function(cmp) {
+                                   });
+    });    
+    </script>
+</apex:page>

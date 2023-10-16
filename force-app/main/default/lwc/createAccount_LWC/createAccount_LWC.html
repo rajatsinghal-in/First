@@ -1,0 +1,35 @@
+<template>
+
+    <div class="slds-grid slds-gutters">
+        <div class="slds-float_right slds-col slds-size_2-of-4 slds-p-horizontal_small">
+    <lightning-record-edit-form object-api-name="Account" onsuccess={handleSuccess}>
+        
+    <lightning-input-field field-name="Name" variant="label-stacked" > </lightning-input-field>
+    <lightning-input-field field-name="Email__c" variant="label-stacked" > </lightning-input-field>
+    <lightning-input-field field-name="Phone" variant="label-stacked" > </lightning-input-field>
+
+    <label for="fieldid">Address </label>
+    <lightning-button type="button" onclick={showAddressOnMap} label="Show Address on Map"> </lightning-button>   
+    <lightning-input-field   data-name="cleaningAddress" field-name="Address__c"  class='slds-hide'> </lightning-input-field>
+
+    <lightning-input type="text" data-name="street" label="Street" onchange={addresschangeevent} ></lightning-input>
+    <lightning-input type="text" data-name="zip" label="Zip" onchange={addresschangeevent} ></lightning-input>
+    <lightning-input type="text" data-name="city" label="City" onchange={addresschangeevent} ></lightning-input>
+    <lightning-input type="text" data-name="state" label="State" onchange={addresschangeevent} ></lightning-input>
+    <lightning-input type="text" data-name="country" label="Country" onchange={addresschangeevent} ></lightning-input>
+
+    <lightning-button type="button" onclick={submitevent} name="submit" label="Create Account"> </lightning-button>   
+    </lightning-record-edit-form>
+</div>
+        <div class="slds-float_left slds-col slds-size_2-of-4 slds-p-horizontal_small">
+            <div class="slds-form-element__control">
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-7">
+                    <lightning-map map-markers={mapMarkers} zoom-level={zoomLevel} markers-title={markersTitle}
+                        show-footer={showFooter} list-view={listView}>
+                    </lightning-map>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>

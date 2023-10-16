@@ -1,0 +1,13 @@
+<aura:component >
+	
+    <aura:attribute name="messageTemp" type="String" />
+    <aura:handler name="RiskComponentEvent" event="c:RiskComponentEvent" action="{!c.handleCmpEvent}" />
+    <p>Risk Child 2</p>
+    <p>{!v.messageTemp}</p>
+    
+    <aura:attribute name="eventMessage" type="String"/> 
+    <aura:handler event="c:RiskApplicationEvent" action="{!c.handleapplicationevent}"/>
+    <div class="slds-m-around_xx-large">
+        <p>{!v.eventMessage}</p> 
+    </div>
+</aura:component>

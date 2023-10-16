@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <p>Risk Outermost Parent</p>
+    <aura:attribute name="messageTempp" type="String" />
+    <aura:handler name="RiskComponentEvent" event="c:RiskComponentEvent" action="{!c.handleCmpEvent}" phase="capture"/>
+    <p>{!v.messageTempp}</p>
+     
+    <c:RiskParentInner firstName="John" lastName="Doer" aura:id="innerparent"/>
+    <lightning:button label="Call child method" onclick="{!c.callChildMethod}"></lightning:button>
+    
+</aura:component>

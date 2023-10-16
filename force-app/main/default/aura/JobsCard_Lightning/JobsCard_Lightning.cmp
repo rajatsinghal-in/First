@@ -1,0 +1,4 @@
+<aura:component >
+	    <aura:attribute name="pageSource" type="String" default="" />
+		<c:jobCards_Lwc pagesource="{!v.pageSource}"></c:jobCards_Lwc>
+</aura:component>

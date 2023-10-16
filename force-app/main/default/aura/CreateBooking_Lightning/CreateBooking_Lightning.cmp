@@ -1,0 +1,3 @@
+<aura:component >
+    <c:createBooking_LWC></c:createBooking_LWC>
+</aura:component>

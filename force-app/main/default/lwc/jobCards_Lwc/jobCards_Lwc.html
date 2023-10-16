@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+        <template if:true={assignedVfPage}>
+        <lightning-datatable
+                    key-field="id"
+                    data={data}
+                    columns={columns}
+                    show-row-number-column
+                    hide-checkbox-column>
+            </lightning-datatable>
+        </template>
+            <template if:false={assignedVfPage}>
+            <lightning-datatable key-field="Id" 
+                    data={data} 
+                    columns={columns} 
+                    show-row-number-column>
+            </lightning-datatable>
+            <lightning-button onclick={handleSave} value="Save" label="Mark as Complete"></lightning-button>
+        </template>
+        </lightning-card>
+</template>

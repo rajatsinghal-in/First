@@ -1,0 +1,29 @@
+<template>
+    <div class="slds-var-m-horizontal_xx-small slds-var-m-bottom_x-small">
+        <p>Message From Outer Parent:</p>
+
+        <p>{messageFromParent}</p>
+        The Value is : {value}
+    </div>
+    <!--div class="margin-bottom-2rem">
+        <lightning-card title="Passing data to Child on action at parent" icon-name="custom:custom14">
+            <div class="slds-m-around_medium">
+                <div class="parent-wrapper">
+                    <h2>Parent Component</h2>
+                    <div class="field">
+                        <label for="name">Enter your percentage:</label>
+                        <input id="percentage" type="number" min="0" max="100" name="percentage" onkeyup={changeHandler}
+                            value={percentage} />
+                    </div>
+                    <div class="child-wrapper">
+                        <h2>Child Component</h2>
+                        <c-risk-l-w-c-child1 percentage={percentage}></c-risk-l-w-c-child1>
+                    </div>
+                </div>
+            </div>
+        </lightning-card>
+    </div-->
+    Value From Child :  {msg}
+    <!--c-risk-l-w-c-child1 percentage={percentage} onmycustomevent={handleCustomEvent}></c-risk-l-w-c-child1-->
+    <c-risk-l-w-c-child1 percentage={percentage}></c-risk-l-w-c-child1>
+</template>

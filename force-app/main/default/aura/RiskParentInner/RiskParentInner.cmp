@@ -1,0 +1,22 @@
+<aura:component>
+	
+    <aura:attribute name="firstName" type="String"/>
+    <aura:attribute name="lastName" type="String"/>
+    <aura:attribute name="messageTemp" type="String" />
+    <aura:handler name="RiskComponentEvent" event="c:RiskComponentEvent" action="{!c.handleCmpEvent}"/>
+    <p>Risk Inner Parent</p>
+    <p>{!v.firstName}</p>
+    <p>{!v.lastName}</p>
+    
+    <aura:method name="sampleMethod" action="{!c.calledFromOuterParent}"
+  		description="Sample method with parameters"> 
+    	<aura:attribute name="param1" type="String" default="parameter 1"/>
+        <aura:attribute name="param2" type="String" default="parameter 2"/>
+	</aura:method>
+        
+    <c:RiskChild1/>
+    <p>{!v.messageTemp}</p>
+    
+    <c:RiskChild2/>
+    
+</aura:component>

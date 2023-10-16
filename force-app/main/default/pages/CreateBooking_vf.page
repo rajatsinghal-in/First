@@ -1,0 +1,13 @@
+<apex:page >
+  <apex:includeLightning />
+  <div id="lightning" />
+  <script>
+    $Lightning.use("c:CreateBooking_LightningApp", function() {        
+        $Lightning.createComponent("c:CreateBooking_Lightning",
+                                   {},
+                                   "lightning",
+                                   function(cmp) {
+                                   });
+    });    
+    </script>
+</apex:page>

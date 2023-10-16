@@ -1,0 +1,3 @@
+<aura:component >
+	<c:createAccount_LWC></c:createAccount_LWC>
+</aura:component>
